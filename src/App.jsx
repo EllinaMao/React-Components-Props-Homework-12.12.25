@@ -2,12 +2,14 @@ import "./css/App.css";
 import ToDoList from "./components/ToDoList";
 import UserCard from "./components/UserCard/UserCard";
 import avatarAhry from "./assets/avatarAhry.jpg";
+import Clock from "./components/Clock";
 
 function App() {
   return (
     <>
       <Task1 />
       <Task2 />
+      <Task3 />
     </>
   );
 }
@@ -33,6 +35,7 @@ function Task2() {
 
   return (
     <>
+      <h3>Extra 1 - UserCards</h3>
       {users.map((user, index) => (
         <UserCard
           key={index}
@@ -41,6 +44,16 @@ function Task2() {
           avatar={user.avatar}
         />
       ))}
+      <hr />
+    </>
+  );
+}
+
+function Task3() {
+  return (
+    <>
+      <h3>Extra 2 - Clocks</h3>
+      <Clock />
       <hr />
     </>
   );
