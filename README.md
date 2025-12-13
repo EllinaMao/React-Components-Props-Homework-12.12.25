@@ -1,16 +1,27 @@
-# React + Vite
+# Main Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Создайте компонент TodoList, который позволяет пользователю добавлять задачи в список дел. Компонент должен использовать this.props и this.state.
 
-Currently, two official plugins are available:
+# Extras
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Создайте небольшой React-проект, в котором отображается профиль пользователя с картинкой, стилями и разными компонентами. Главный компонент App Отвечает за отображение всех остальных компонентов.
+Компонент UserCard, отображает:
+1) имя пользователя (через props) 
+2) город (через props) 
+3) аватарку (через props, картинка из папки src/assets или public) 
+4) использует CSS-файл
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Создайте компонент Clock, который показывает текущее время и обновляется каждую секунду.
 
-## Expanding the ESLint configuration
+3. Создайте компонент ImageGallery, который позволяет пользователю переключаться между различными изображениями.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+4. Создайте два функциональных компонента: Button и App.
+Button: принимает свойство label (текст кнопки) и свойство-обработчик onClickHandler. Отображает кнопку с текстом из label. При нажатии вызывает функцию, переданную через onClickHandler.
+
+App (родительский компонент): определите функцию handleButtonClick, которая просто выводит в консоль сообщение: "Кнопка [название кнопки] была нажата!". 
+Рендерит два экземпляра компонента Button, передавая:
+1) Для первой кнопки: label="Старт" и onClickHandler с функцией handleButtonClick (с аргументом "Старт").
+2) Для второй кнопки: label="Стоп" и onClickHandler с функцией handleButtonClick (с аргументом "Стоп").
+
+Реализовать передачу функции-обработчика из родительского компонента App в дочерний компонент Button через свойства и корректный вызов этой функции при событии onClick.
