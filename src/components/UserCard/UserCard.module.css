@@ -1,0 +1,47 @@
+.userCard {
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #3a3a3a;
+  transition: transform 0.2s;
+  color: #ffffff;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.userCard:last-child {
+  margin-bottom: 20px;
+}
+
+.userCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #61dafb;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #61dafb;
+}
+
+.name {
+  font-size: 1.2em;
+  text-align: center;
+  margin: auto;
+}
+
+.city {
+  font-size: 1em;
+  color: #afafaf;
+  text-align: center;
+}
