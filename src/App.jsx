@@ -3,18 +3,20 @@ import ToDoList from "./components/ToDoList";
 import UserCard from "./components/UserCard/UserCard";
 import avatarAhry from "./assets/avatarAhry.jpg";
 import Clock from "./components/Clock";
+import ImageGalery from "./components/ImageGallery/ImageGallery";
 
 function App() {
   return (
     <>
-      <Task1 />
-      <Task2 />
-      <Task3 />
+      <MainTask />
+      <Extra1 />
+      <Extra2 />
+      <Extra3 />
     </>
   );
 }
 
-function Task1() {
+function MainTask() {
   const toDo = ["Clean house", "Eat food"];
   const mainTask = "Main task - todo list";
   return (
@@ -25,7 +27,7 @@ function Task1() {
   );
 }
 
-function Task2() {
+function Extra1() {
   const avatar2 = "/avatar2.jpg";
   const users = [
     { name: "I`m quien~", city: "Seoul", avatar: avatarAhry },
@@ -49,11 +51,40 @@ function Task2() {
   );
 }
 
-function Task3() {
+function Extra2() {
   return (
     <>
       <h3>Extra 2 - Clocks</h3>
       <Clock />
+      <hr />
+    </>
+  );
+}
+
+function Extra3() {
+  const images = [
+    {
+      src: "/gallery1.jpg",
+      alt: "Ivan from Alien Stage",
+    },
+    {
+      src: "/gallery2.jpg",
+      alt: "Cosmo cat!",
+    },
+    {
+      src: "/gallery3.jpg",
+      alt: "Cute kitten in flowers",
+    },
+    {
+      src: "/gallery4.jpg",
+      alt: "Cat paw!",
+    },
+  ];
+
+  return (
+    <>
+      <h3>Extra 3 - Image Gallery</h3>
+      <ImageGalery images={images} />
       <hr />
     </>
   );
