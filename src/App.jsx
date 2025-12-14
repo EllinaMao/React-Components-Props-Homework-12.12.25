@@ -4,14 +4,31 @@ import UserCard from "./components/UserCard/UserCard";
 import avatarAhry from "./assets/avatarAhry.jpg";
 import Clock from "./components/Clock";
 import ImageGalery from "./components/ImageGallery/ImageGallery";
+import Button from "./Button";
 
 function App() {
+  const handleButtonClick = (buttonName) => {
+    console.log(`Button ${buttonName} was clicked!`);
+  }
+  const start = "Старт";
+  const stop = "Стоп";
   return (
     <>
       <MainTask />
       <Extra1 />
       <Extra2 />
       <Extra3 />
+      <hr />
+      <h3>Extra 4 - buttons</h3>
+      <Button 
+      label={start}
+      onClickHandler={()=> handleButtonClick(start)}
+       />
+             <Button 
+      label={stop}
+      onClickHandler={()=> handleButtonClick(stop)}
+       />
+
     </>
   );
 }
@@ -89,5 +106,6 @@ function Extra3() {
     </>
   );
 }
+
 
 export default App;
