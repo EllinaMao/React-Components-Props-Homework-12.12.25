@@ -18,7 +18,6 @@ function App() {
       <Extra1 />
       <Extra2 />
       <Extra3 />
-      <hr />
       <h3>Extra 4 - buttons</h3>
       <Button 
       label={start}
